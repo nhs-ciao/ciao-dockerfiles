@@ -5,11 +5,11 @@ MAINTAINER HSCIC
 RUN apt-get update
 RUN apt-get install -y openjdk-7-jdk unzip wget
 # Get ActiveMQ
-RUN wget http://mirror.catn.com/pub/apache/activemq/5.12.1/apache-activemq-5.12.1-bin.tar.gz
-# Extract the files from the gzip file to /opt/apache-activemq-5.12.1
-RUN tar zxvf apache-activemq-5.12.1-bin.tar.gz -C /opt
-# Move /opt/apache-activemq-5.12.1 to /opt/activemq
-RUN mv /opt/apache-activemq-5.12.1 /opt/activemq
+RUN wget http://mirror.catn.com/pub/apache/activemq/5.13.1/apache-activemq-5.13.1-bin.tar.gz
+# Extract the files from the gzip file to /opt/apache-activemq-5.13.1
+RUN tar zxvf apache-activemq-5.13.1-bin.tar.gz -C /opt
+# Move /opt/apache-activemq-5.13.1 to /opt/activemq
+RUN mv /opt/apache-activemq-5.13.1 /opt/activemq
 # Configuration folder
 VOLUME ["/opt/activemq/conf"]
 # Data folder
